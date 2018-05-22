@@ -32,6 +32,7 @@ public class SocketUtilsImpl implements SocketUtils {
                     sockets.add(connectedSocket);
                     onClientConnected.onClientConnected(connectedSocket);
                 }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
