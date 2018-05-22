@@ -1,5 +1,7 @@
 package com.sukinsan.utils;
 
+import com.sukinsan.sockets.SocketUtils;
+
 public interface ActionUtil {
 
     void setMousePosition(int x, int y);
@@ -7,4 +9,6 @@ public interface ActionUtil {
     void pressMouse(int keyCode);
 
     void releaseMouse(int keyCode);
+
+    boolean setListener(SocketUtils server);
 }
