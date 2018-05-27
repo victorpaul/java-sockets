@@ -7,9 +7,8 @@ import com.sukinsan.utils.ActionUtilImpl;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ActionUtil actionUtil = new ActionUtilImpl();
-
 
         SocketUtils server = new SocketUtilsImpl((su, cs, message) -> {
             System.out.println("Got message " + message + " from " + cs.getHost());

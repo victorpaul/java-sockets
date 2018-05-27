@@ -1,14 +1,20 @@
 package com.sukinsan.utils;
 
 import com.sukinsan.sockets.SocketUtils;
+import org.jnativehook.keyboard.NativeKeyEvent;
 
 public interface ActionUtil {
+    enum ActionType {
+        KEYBOARD_TYPED,
+        KEYBOARD_PRESSED,
+        KEYBOARD_RELEASED,
+        MOUSE_PRESSED,
+        MOUSE_RELEASED
+    }
 
-    void setMousePosition(int x, int y);
+    boolean setListener(SocketUtils su);
 
-    void pressMouse(int keyCode);
+    void sendAction(SocketUtils su,ActionUtilImpl.ActionType type, NativeKeyEvent e);
 
-    void releaseMouse(int keyCode);
-
-    boolean setListener(SocketUtils server);
+    void receiveAction(String message);
 }
